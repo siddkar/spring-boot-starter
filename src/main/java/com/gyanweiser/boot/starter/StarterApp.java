@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication(scanBasePackages = "com.cg.boot.todo")
-public class TodoApp {
+public class StarterApp {
 
 	/**
 	 * This is the main method which starts the application.
@@ -18,6 +18,6 @@ public class TodoApp {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(TodoApp.class, args);
+		SpringApplication.run(StarterApp.class, args);
 	}
 }

@@ -8,7 +8,7 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<description>This project is a sample spring boot project.</description>
+	<description>This project is a spring boot starter project.</description>
 
 	<properties>
 		<!-- Enabling Java 1.8 -->
@@ -79,13 +79,13 @@
 						</goals>
 						<configuration>
 							<mainClass>
-								com.cg.boot.todo.TodoApp
+								com.gyanweiser.boot.starter.StarterApp
 							</mainClass>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
-		<finalName>todoapp</finalName>
+		<finalName>StarterApp</finalName>
 	</build>
 </project>
