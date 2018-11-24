@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /todo/api/v1
+    context-path: /starter/api/v1
     
 spring:
   datasource:

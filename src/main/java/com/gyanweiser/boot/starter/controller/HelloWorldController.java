@@ -20,6 +20,6 @@ public class HelloWorldController {
 	 */
 	@GetMapping(path = "/hello")
 	public ResponseEntity<String> helloWorld() {
-		return new ResponseEntity<>("Hello!!! Welcome to Spring Boot App", HttpStatus.OK);
+		return new ResponseEntity<>("Hello!!! Welcome to Spring Boot Starter App", HttpStatus.OK);
 	}
 }
