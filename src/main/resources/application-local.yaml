@@ -1,0 +1,22 @@
+server:
+  port: 3000
+
+spring:
+  profiles: local
+  datasource:
+    username: scott
+    password: tiger
+    url: jdbc:postgresql://localhost:5432/todoapp?currentSchema=starter
+  jpa:
+    show-sql: true
+    hibernate:
+      # change ddl-auto value based on the environment.
+      ddl-auto: create-drop
+      temp:
+        use_jdbc_metadata_defaults: false
+      
+jwt:
+  token:
+   secret-key: testSecret
+   expire-length: 3600000
+      

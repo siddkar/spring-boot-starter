@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- Basic Project Setup -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.gyanweiser.boot.starter</groupId>
+	<artifactId>spring-boot-starter</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+
+	<description>This project is a sample spring boot project.</description>
+
+	<properties>
+		<!-- Enabling Java 1.8 -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<jwt.version>0.9.1</jwt.version>
+	</properties>
+
+	<!-- Adding Spring Boot Parent -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.2.RELEASE</version>
+	</parent>
+
+	<!-- Adding Dependencies -->
+	<dependencies>
+
+		<!-- Adding spring web dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Adding spring data and hibernate dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Adding postgres jdbc dependency -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+		<!-- Adding spring security dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<!-- Adding jsonwebtoken dependency -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>${jwt.version}</version>
+		</dependency>
+
+		<!-- Adding lombok to generate pojo classes -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<!-- Configuring Build -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<mainClass>
+								com.cg.boot.todo.TodoApp
+							</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<finalName>todoapp</finalName>
+	</build>
+</project>
